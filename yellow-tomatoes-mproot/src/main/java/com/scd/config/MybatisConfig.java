@@ -1,4 +1,4 @@
-package config;
+package com.scd.config;
 
 import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;

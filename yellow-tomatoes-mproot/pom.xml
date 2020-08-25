@@ -12,7 +12,7 @@
     <artifactId>yellow-tomatoes-mproot</artifactId>
 
     <properties>
-        <mybatis-plus-boot-starter.version>3.2.0</mybatis-plus-boot-starter.version>
+        <mybatis-plus-boot-starter.version>3.3.2</mybatis-plus-boot-starter.version>
     </properties>
     <dependencies>
         <dependency>

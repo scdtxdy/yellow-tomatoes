@@ -1,7 +1,7 @@
 2020-08-10 17:23:12,141 [main] INFO  [c.s.y.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 105596 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
 2020-08-10 17:23:12,147 [main] INFO  [c.s.y.YellowTomatoesSystemApplication] SpringApplication.java:655 - The following profiles are active: dev
-2020-08-10 17:23:13,242 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.yellowtomatoessystem]' package. Please check your configuration.
-2020-08-10 17:23:13,351 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.yellowtomatoessystem]' package. Please check your configuration.
+2020-08-10 17:23:13,242 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.yellowtomatoes]' package. Please check your configuration.
+2020-08-10 17:23:13,351 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.yellowtomatoes]' package. Please check your configuration.
 2020-08-10 17:23:13,909 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
 2020-08-10 17:23:13,921 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
 2020-08-10 17:23:13,922 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
@@ -17,24 +17,316 @@
 2020-08-10 17:23:36,292 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-08-10 17:23:36,293 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
 2020-08-10 17:23:36,321 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 19 ms
-2020-08-25 14:26:08,099 [main] INFO  [c.s.y.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 18896 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
-2020-08-25 14:26:08,122 [main] INFO  [c.s.y.YellowTomatoesSystemApplication] SpringApplication.java:655 - The following profiles are active: dev
-2020-08-25 14:26:10,019 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.yellowtomatoessystem]' package. Please check your configuration.
-2020-08-25 14:26:10,198 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.yellowtomatoessystem]' package. Please check your configuration.
-2020-08-25 14:26:10,929 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
-2020-08-25 14:26:10,947 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
-2020-08-25 14:26:10,949 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
-2020-08-25 14:26:10,950 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
-2020-08-25 14:26:11,083 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
-2020-08-25 14:26:11,084 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2764 ms
-2020-08-25 14:26:11,374 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-08-25 14:26:11,679 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
-2020-08-25 14:26:12,119 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:930 - {dataSource-1} inited
-2020-08-25 14:26:12,619 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8080"]
-2020-08-25 14:26:12,762 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-25 14:26:12,842 [main] INFO  [c.s.y.YellowTomatoesSystemApplication] StartupInfoLogger.java:61 - Started YellowTomatoesSystemApplication in 6.339 seconds (JVM running for 9.143)
-2020-08-25 14:26:26,899 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-08-25 14:26:26,900 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2020-08-25 14:26:26,909 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 8 ms
-2020-08-25 14:45:09,344 [SpringContextShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1825 - {dataSource-1} closed
-2020-08-25 14:45:09,346 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-10 18:00:37,793 [SpringContextShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1825 - {dataSource-1} closed
+2020-08-10 18:00:37,795 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-11 10:08:39,349 [main] INFO  [c.s.y.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 47748 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-11 10:08:39,358 [main] INFO  [c.s.y.YellowTomatoesSystemApplication] SpringApplication.java:655 - The following profiles are active: dev
+2020-08-11 10:08:40,555 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - Skipping MapperFactoryBean with name 'sysUserMapper' and 'SysUserMapper' mapperInterface. Bean already defined with the same name!
+2020-08-11 10:08:40,557 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.yellowtomatoes]' package. Please check your configuration.
+2020-08-11 10:08:41,104 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-11 10:08:41,117 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-11 10:08:41,118 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-11 10:08:41,119 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-11 10:08:41,285 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-11 10:08:41,285 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 1786 ms
+2020-08-11 10:08:41,536 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-11 10:08:42,071 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:930 - {dataSource-1} inited
+2020-08-11 10:08:42,745 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-11 10:08:43,097 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8080"]
+2020-08-11 10:08:43,132 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-11 10:08:43,143 [main] INFO  [c.s.y.YellowTomatoesSystemApplication] StartupInfoLogger.java:61 - Started YellowTomatoesSystemApplication in 4.955 seconds (JVM running for 8.089)
+2020-08-11 10:10:07,670 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-11 10:10:07,671 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2020-08-11 10:10:07,679 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 8 ms
+2020-08-11 15:29:29,862 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-11 15:29:29,876 [SpringContextShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1825 - {dataSource-1} closed
+2020-08-25 13:36:07,426 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 6572 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 13:36:07,436 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-25 13:36:08,971 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.*.mapper]' package. Please check your configuration.
+2020-08-25 13:36:09,522 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 13:36:09,553 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 13:36:09,554 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 13:36:09,554 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 13:36:09,701 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 13:36:09,701 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2126 ms
+2020-08-25 13:36:09,841 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 13:36:09,994 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserController' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\rest\SysUserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\impl\SysUserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-25 13:36:09,994 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2020-08-25 13:36:10,031 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-25 13:36:10,041 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-25 13:36:36,491 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 6072 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 13:36:36,500 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-25 13:36:37,724 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.*.mapper]' package. Please check your configuration.
+2020-08-25 13:36:38,211 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 13:36:38,231 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 13:36:38,231 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 13:36:38,231 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 13:36:38,411 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 13:36:38,411 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 1733 ms
+2020-08-25 13:36:38,611 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 13:36:38,758 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserController' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\rest\SysUserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\impl\SysUserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-25 13:36:38,762 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2020-08-25 13:36:38,791 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-25 13:36:38,801 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-25 14:04:38,591 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 6108 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 14:04:38,613 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-25 14:04:40,959 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.*.mapperr, com.scd.com.scd.config]' package. Please check your configuration.
+2020-08-25 14:04:41,451 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 14:04:41,463 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 14:04:41,464 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 14:04:41,465 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 14:04:41,604 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 14:04:41,604 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2818 ms
+2020-08-25 14:04:41,735 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 14:04:41,930 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserController' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\rest\SysUserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\impl\SysUserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-25 14:04:41,934 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2020-08-25 14:04:41,987 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-25 14:04:42,004 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-25 14:07:21,165 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 6720 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 14:07:21,177 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-25 14:07:22,288 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.*.mapperr, com.scd.yellowtomatoes.com.scd.config]' package. Please check your configuration.
+2020-08-25 14:07:22,947 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 14:07:22,960 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 14:07:22,961 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 14:07:22,962 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 14:07:23,118 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 14:07:23,119 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 1738 ms
+2020-08-25 14:07:23,266 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 14:07:23,398 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserController' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\rest\SysUserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\impl\SysUserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-25 14:07:23,402 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2020-08-25 14:07:23,441 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-25 14:07:23,467 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-25 14:08:51,703 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 18460 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 14:08:51,713 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-25 14:08:53,296 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.yellowtomatoes.modules.*.service.mapperr, com.scd.yellowtomatoes.com.scd.config]' package. Please check your configuration.
+2020-08-25 14:08:53,808 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 14:08:53,821 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 14:08:53,822 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 14:08:53,822 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 14:08:53,998 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 14:08:53,999 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2164 ms
+2020-08-25 14:08:54,166 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 14:08:54,287 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserController' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\rest\SysUserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\impl\SysUserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-25 14:08:54,291 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2020-08-25 14:08:54,324 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-25 14:08:54,335 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-25 14:09:30,368 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 15288 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 14:09:30,384 [main] INFO  [c.s.yellowtomatoes.YellowTomatoesSystemApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-25 14:09:32,104 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.*.mapper]' package. Please check your configuration.
+2020-08-25 14:09:32,600 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 14:09:32,613 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 14:09:32,614 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 14:09:32,614 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 14:09:32,990 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 14:09:32,993 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2458 ms
+2020-08-25 14:09:33,161 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 14:09:33,347 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserController' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\rest\SysUserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\impl\SysUserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\yellowtomatoes\modules\system\service\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-25 14:09:33,351 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2020-08-25 14:09:33,388 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-25 14:09:33,405 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-25 14:13:12,252 [main] INFO  [com.scd.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 6552 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 14:13:12,260 [main] INFO  [com.scd.YellowTomatoesSystemApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-25 14:13:14,529 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 14:13:14,539 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 14:13:14,539 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 14:13:14,539 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 14:13:14,678 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 14:13:14,678 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2324 ms
+2020-08-25 14:13:14,788 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 14:13:14,888 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserController' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\modules\system\rest\SysUserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\modules\system\service\impl\SysUserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\modules\system\service\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-25 14:13:14,888 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2020-08-25 14:13:14,928 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-25 14:13:14,938 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-25 14:20:47,532 [main] INFO  [com.scd.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 20020 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 14:20:47,572 [main] INFO  [com.scd.YellowTomatoesSystemApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2020-08-25 14:20:49,804 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 14:20:49,824 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 14:20:49,830 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 14:20:49,830 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 14:20:50,062 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 14:20:50,063 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2273 ms
+2020-08-25 14:20:50,252 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 14:20:50,394 [main] WARN  [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] AbstractApplicationContext.java:559 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserController' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\modules\system\rest\SysUserController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserServiceImpl' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\modules\system\service\impl\SysUserServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysUserMapper' defined in file [C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes\com\scd\modules\system\service\mapper\SysUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-08-25 14:20:50,394 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Stopping service [Tomcat]
+2020-08-25 14:20:50,432 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] ConditionEvaluationReportLoggingListener.java:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-25 14:20:50,445 [main] ERROR [o.s.b.diagnostics.LoggingFailureAnalysisReporter] LoggingFailureAnalysisReporter.java:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-08-25 15:34:29,745 [main] INFO  [com.scd.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 9576 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-08-25 15:34:29,755 [main] INFO  [com.scd.YellowTomatoesSystemApplication] SpringApplication.java:655 - The following profiles are active: dev
+2020-08-25 15:34:31,201 [main] WARN  [org.mybatis.spring.mapper.ClassPathMapperScanner] Logger.java:44 - No MyBatis mapper was found in '[com.scd.*.mapper]' package. Please check your configuration.
+2020-08-25 15:34:31,705 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-08-25 15:34:31,729 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-25 15:34:31,730 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-08-25 15:34:31,731 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-25 15:34:31,881 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-08-25 15:34:31,882 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 1991 ms
+2020-08-25 15:34:32,183 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-08-25 15:34:32,554 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:930 - {dataSource-1} inited
+2020-08-25 15:34:33,660 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-25 15:34:34,038 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8080"]
+2020-08-25 15:34:34,071 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-25 15:34:34,082 [main] INFO  [com.scd.YellowTomatoesSystemApplication] StartupInfoLogger.java:61 - Started YellowTomatoesSystemApplication in 5.561 seconds (JVM running for 7.783)
+2020-08-25 15:35:46,249 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-25 15:35:46,250 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2020-08-25 15:35:46,260 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 10 ms
+2020-08-25 15:35:54,504 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-25 15:35:54,520 [SpringContextShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1825 - {dataSource-1} closed

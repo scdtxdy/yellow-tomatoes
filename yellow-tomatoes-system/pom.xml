@@ -6,7 +6,6 @@
         <groupId>com.scd</groupId>
         <artifactId>yellow-tomatoes</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.scd</groupId>
     <artifactId>yellow-tomatoes-system</artifactId>
@@ -22,6 +21,11 @@
         <dependency>
             <groupId>com.scd</groupId>
             <artifactId>yellow-tomatoes-mproot</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scd</groupId>
+            <artifactId>yellow-tomatoes-generator</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
