@@ -3,6 +3,8 @@ package com.scd;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.pagehelper.PageHelper;
 import com.scd.modules.system.domain.User;
 import com.scd.modules.system.enums.SexEnum;
@@ -25,14 +27,20 @@ class YellowTomatoesSystemApplicationTests {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private SysUserMapper sysUserMapper;
+
     @Test
     void getUser() {
-        PageHelper.startPage(1, 1);
-        List<User> list = userService.list();
 
-        list.forEach((item) -> {
-            System.out.println(item.toString());
-        });
+        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
+        System.out.println(userIPage);
+//        PageHelper.startPage(1, 1);
+//        List<User> list = userService.list();
+//
+//        list.forEach((item) -> {
+//            System.out.println(item.toString());
+//        });
 
 //        User user = new User();
 //        user.setId(1l);
