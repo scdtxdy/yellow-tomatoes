@@ -1,7 +1,9 @@
 package com.scd.config;
 
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,5 +23,10 @@ public class MybatisConfig {
         properties.setProperty("dialect","mysql");
         pageHelper.setProperties(properties);
         return pageHelper;
+    }
+
+    @Bean
+    public Jackson2ObjectMapperBuilderCustomizer customizer(){
+        return builder -> builder.featuresToEnable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     }
 }

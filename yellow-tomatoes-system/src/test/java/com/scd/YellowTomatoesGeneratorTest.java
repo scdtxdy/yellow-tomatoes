@@ -37,7 +37,7 @@ public class YellowTomatoesGeneratorTest {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName("sys"); // 模块名称, 这里可以根据不同模块来写
-        pc.setParent("com.scd.yellowtomatoessystem.modules"); // 父包名
+        pc.setParent("com.scd.modules"); // 父包名
         mpg.setPackageInfo(pc);
 
 

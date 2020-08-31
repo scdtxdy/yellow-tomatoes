@@ -1,6 +1,7 @@
 package com.scd.modules.system.domain;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.scd.modules.system.enums.SexEnum;
 import lombok.Data;
 
 import java.sql.Timestamp;
@@ -46,7 +47,7 @@ public class User {
 
 
     /** 性别 */
-    private String sex;
+    private SexEnum sex;
 
     public @interface Update {}
 }
