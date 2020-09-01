@@ -14,6 +14,6 @@ import java.util.List;
 @Mapper
 public interface SysUserMapper extends CoreMapper<User> {
 
-    @Select("SELECT id,nick_name FROM user")
+    @Select("SELECT id,nick_name, sex FROM user")
     List<User> selectPageVo(IPage<User> page);
 }
