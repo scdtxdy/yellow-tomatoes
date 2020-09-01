@@ -1,7 +1,9 @@
 package com.scd.config;
 
 import com.baomidou.mybatisplus.core.parser.ISqlParser;
+import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantHandler;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantSqlParser;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -20,6 +22,15 @@ import java.util.Properties;
 @Configuration
 @MapperScan("com.scd.*.mapper")
 public class MybatisConfig {
+
+    @Bean
+    public MybatisPlusInterceptor mybatisPlusInterceptor() {
+        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+        // 添加乐观锁插件, 暂时只添加bean,不做完整配置,因为懒.
+        interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
+        return interceptor;
+    }
+
     @Bean
     public PageHelper pageHelper() {
         PageHelper pageHelper = new PageHelper();
