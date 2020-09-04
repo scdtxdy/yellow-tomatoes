@@ -1,14 +1,20 @@
 package com.scd.config;
 
+import com.baomidou.mybatisplus.annotation.DbType;
+import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.core.parser.ISqlParser;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantHandler;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantSqlParser;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.github.pagehelper.PageHelper;
 import net.sf.jsqlparser.expression.Expression;
+import net.sf.jsqlparser.expression.LongValue;
 import net.sf.jsqlparser.expression.StringValue;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
@@ -26,9 +32,29 @@ public class MybatisConfig {
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+        //多租户插件
+        interceptor.addInnerInterceptor(new TenantLineInnerInterceptor(new TenantLineHandler() {
+            @Override
+            public Expression getTenantId() {
+                return new LongValue(1);
+            }
+
+            // 这是 default 方法,默认返回 false 表示所有表都需要拼多租户条件
+            @Override
+            public boolean ignoreTable(String tableName) {
+                return false;
+            }
+        }));
+        //分页插件
+        interceptor.addInnerInterceptor(new PaginationInnerInterceptor());
         // 添加乐观锁插件, 暂时只添加bean,不做完整配置,因为懒.
-        interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
+//        interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
         return interceptor;
+    }
+
+    @Bean
+    public ConfigurationCustomizer configurationCustomizer() {
+        return configuration -> configuration.setUseDeprecatedExecutor(false);
     }
 
     @Bean
@@ -49,49 +75,49 @@ public class MybatisConfig {
         return builder -> builder.featuresToEnable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     }
 
-    /**
-     * mybatis-plus分页插件
-     */
-    @Bean
-    public PaginationInterceptor paginationInterceptor() {
-
-        PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
-
-        // 创建SQL解析器集合
-        List<ISqlParser> sqlParserList = new ArrayList<>();
-
-        // 创建租户SQL解析器
-        TenantSqlParser tenantSqlParser = new TenantSqlParser();
-
-        // 设置租户处理器
-        tenantSqlParser.setTenantHandler(new TenantHandler() {
-            @Override
-            public Expression getTenantId(boolean where) {
-                // 设置当前租户ID，实际情况你可以从cookie、或者缓存中拿都行
-                return new StringValue("jiannan");
-            }
-
-            @Override
-            public String getTenantIdColumn() {
-                // 对应数据库租户ID的列名
-                return "tenant_id";
-            }
-
-            @Override
-            public boolean doTableFilter(String tableName) {
-                // 是否需要需要过滤某一张表
-              /*  List<String> tableNameList = Arrays.asList("sys_user");
-                if (tableNameList.contains(tableName)){
-                    return true;
-                }*/
-                return false;
-            }
-        });
-
-        sqlParserList.add(tenantSqlParser);
-        paginationInterceptor.setSqlParserList(sqlParserList);
-
-
-        return paginationInterceptor;
-    }
+//    /**
+//     * mybatis-plus分页插件
+//     */
+//    @Bean
+//    public PaginationInterceptor paginationInterceptor() {
+//
+//        PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+//
+//        // 创建SQL解析器集合
+//        List<ISqlParser> sqlParserList = new ArrayList<>();
+//
+//        // 创建租户SQL解析器
+//        TenantSqlParser tenantSqlParser = new TenantSqlParser();
+//
+//        // 设置租户处理器
+//        tenantSqlParser.setTenantHandler(new TenantHandler() {
+//            @Override
+//            public Expression getTenantId(boolean where) {
+//                // 设置当前租户ID，实际情况你可以从cookie、或者缓存中拿都行
+//                return new LongValue(1);
+//            }
+//
+//            @Override
+//            public String getTenantIdColumn() {
+//                // 对应数据库租户ID的列名
+//                return "tenant_id";
+//            }
+//
+//            @Override
+//            public boolean doTableFilter(String tableName) {
+//                // 是否需要需要过滤某一张表
+//              /*  List<String> tableNameList = Arrays.asList("sys_user");
+//                if (tableNameList.contains(tableName)){
+//                    return true;
+//                }*/
+//                return false;
+//            }
+//        });
+//
+//        sqlParserList.add(tenantSqlParser);
+//        paginationInterceptor.setSqlParserList(sqlParserList);
+//
+//
+//        return paginationInterceptor;
+//    }
 }
