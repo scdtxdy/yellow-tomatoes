@@ -1,0 +1,33 @@
+ Consume Time：37 ms 2020-09-01 13:54:16
+ Execute SQL：select 1
+
+ Consume Time：0 ms 2020-09-01 13:54:16
+ Execute SQL：select 1
+
+ Consume Time：3 ms 2020-09-01 13:54:16
+ Execute SQL：select 1
+
+ Consume Time：3 ms 2020-09-01 13:54:20
+ Execute SQL：SELECT COUNT(1) FROM ( SELECT id,nick_name, sex FROM user ) TOTAL
+
+ Consume Time：1 ms 2020-09-01 13:54:20
+ Execute SQL：SELECT id,nick_name, sex FROM user LIMIT 0,2
+
+ Consume Time：23 ms 2020-09-01 14:04:39
+ Execute SQL：SELECT COUNT(1) FROM ( SELECT id,nick_name, sex FROM user ) TOTAL
+
+ Consume Time：1 ms 2020-09-01 14:04:40
+ Execute SQL：SELECT id,nick_name, sex FROM user LIMIT 0,2
+
+ Consume Time：11 ms 2020-09-01 14:10:51
+ Execute SQL：SELECT COUNT(1) FROM ( SELECT id,nick_name, sex FROM user ) TOTAL
+
+ Consume Time：1 ms 2020-09-01 14:10:51
+ Execute SQL：SELECT id,nick_name, sex FROM user LIMIT 0,2
+
+ Consume Time：18 ms 2020-09-01 14:12:09
+ Execute SQL：SELECT COUNT(1) FROM ( SELECT id,nick_name, sex FROM user ) TOTAL
+
+ Consume Time：0 ms 2020-09-01 14:12:09
+ Execute SQL：SELECT id,nick_name, sex FROM user LIMIT 0,2
+

@@ -1,5 +1,6 @@
 package com.scd.modules.system.service.mapper;
 
+import com.baomidou.mybatisplus.annotation.InterceptorIgnore;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.scd.common.mapper.CoreMapper;
@@ -14,6 +15,7 @@ import java.util.List;
 @Mapper
 public interface SysUserMapper extends CoreMapper<User> {
 
+//    @InterceptorIgnore(tenantLine = "1")
     @Select("SELECT id,nick_name, sex FROM user")
     List<User> selectPageVo(IPage<User> page);
 }
