@@ -16,6 +16,6 @@ import java.util.List;
 public interface SysUserMapper extends CoreMapper<User> {
 
 //    @InterceptorIgnore(tenantLine = "1")
-    @Select("SELECT id,nick_name, sex FROM user")
+    @Select("SELECT id,nick_name, sex, deleted FROM user")
     List<User> selectPageVo(IPage<User> page);
 }

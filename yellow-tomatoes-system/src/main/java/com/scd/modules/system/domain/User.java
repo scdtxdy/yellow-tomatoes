@@ -49,5 +49,8 @@ public class User {
     /** 性别 */
     private SexEnum sex;
 
-    public @interface Update {}
+    /* 删除标识*/
+    @TableLogic
+    private Integer deleted;
+
 }

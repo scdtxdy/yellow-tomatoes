@@ -35,11 +35,11 @@ class YellowTomatoesSystemApplicationTests {
 //        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
 //        System.out.println(userIPage);
 //        PageHelper.startPage(1, 1);
-//        List<User> list = userService.list();
-//
-//        list.forEach((item) -> {
-//            System.out.println(item.toString());
-//        });
+        List<User> list = userService.list();
+
+        list.forEach((item) -> {
+            System.out.println(item.toString());
+        });
 
 //        User user = new User();
 //        user.setId(1l);
@@ -56,13 +56,13 @@ class YellowTomatoesSystemApplicationTests {
 //        int count = userService.count();
 //        System.out.println(count);
 
-        User user = new User();
-        user.setNickName("scd");
-        user.setEmail("542846492@qq.com");
-        user.setSex(SexEnum.MAN);
-
-        boolean save = userService.save(user);
-        System.out.println("scd = "+save);
+//        User user = new User();
+//        user.setNickName("scd");
+//        user.setEmail("542846492@qq.com");
+//        user.setSex(SexEnum.MAN);
+//
+//        boolean save = userService.save(user);
+//        System.out.println("scd = "+save);
     }
 
 }
