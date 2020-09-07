@@ -1,24 +1,12 @@
 package com.scd;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.github.pagehelper.PageHelper;
-import com.scd.modules.system.domain.User;
-import com.scd.modules.system.enums.SexEnum;
 import com.scd.modules.system.service.UserService;
-import com.scd.modules.system.service.impl.SysUserServiceImpl;
 import com.scd.modules.system.service.mapper.SysUserMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.Arrays;
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -32,14 +20,21 @@ class YellowTomatoesSystemApplicationTests {
 
     @Test
     void getUser() {
+        sysUserMapper.deleteAll();
+
+//        User one = sysUserMapper.findOne(1l);
+//        System.out.println(one);
 //        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
 //        System.out.println(userIPage);
-//        PageHelper.startPage(1, 1);
-        List<User> list = userService.list();
 
-        list.forEach((item) -> {
-            System.out.println(item.toString());
-        });
+        // 使用pageHelper 的时候 自引用jsqlparser版本不兼容, net.sf.jsqlparser.statement.select.PlainSelect.getGroupByColumnReferences()
+        // 故推荐使用mp自带分页插件
+//        PageHelper.startPage(1, 1);
+//        List<User> list = userService.list();
+//
+//        list.forEach((item) -> {
+//            System.out.println(item.toString());
+//        });
 
 //        User user = new User();
 //        user.setId(1l);
