@@ -25,12 +25,12 @@ class YellowTomatoesSystemApplicationTests {
 
     @Test
     void getUser() {
-        sysUserMapper.deleteAll();
+//        sysUserMapper.deleteAll();
 
 //        User one = sysUserMapper.findOne(1l);
 //        System.out.println(one);
-//        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
-//        System.out.println(userIPage);
+        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
+        System.out.println(userIPage);
 
         // 使用pageHelper 的时候 自引用jsqlparser版本不兼容, net.sf.jsqlparser.statement.select.PlainSelect.getGroupByColumnReferences()
         // 故推荐使用mp自带分页插件

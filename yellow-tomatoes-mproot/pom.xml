@@ -24,5 +24,9 @@
             <artifactId>mybatis-plus-annotation</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+        </dependency>
     </dependencies>
 </project>

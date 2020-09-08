@@ -3,6 +3,7 @@ package com.scd.config;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.handler.TenantLineHandler;
+import com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.TenantLineInnerInterceptor;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -33,10 +34,13 @@ public class MybatisConfig {
                 return false;
             }
         }));
+
         //分页插件
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor());
         // 添加乐观锁插件, 暂时只添加bean,不做完整配置,因为懒.
 //        interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
+        // sql攻击解析器,防止全表删除或更新
+        interceptor.addInnerInterceptor(new BlockAttackInnerInterceptor());
         return interceptor;
     }
 
@@ -45,13 +49,22 @@ public class MybatisConfig {
         return configuration -> configuration.setUseDeprecatedExecutor(false);
     }
 
+    /**
+     * jackson
+     * @return
+     */
     @Bean
     public Jackson2ObjectMapperBuilderCustomizer customizer() {
         return builder -> builder.featuresToEnable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     }
 
+    /**
+     *  sql注入器
+     * @return
+     */
     @Bean
     public MySqlInjector sqlInjector() {
         return new MySqlInjector();
     }
+
 }
