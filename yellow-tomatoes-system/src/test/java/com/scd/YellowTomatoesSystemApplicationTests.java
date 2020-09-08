@@ -1,6 +1,8 @@
 package com.scd;
 
+import cn.hutool.core.lang.func.Func1;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.scd.modules.system.domain.User;
 import com.scd.modules.system.service.UserService;
@@ -29,8 +31,10 @@ class YellowTomatoesSystemApplicationTests {
 
 //        User one = sysUserMapper.findOne(1l);
 //        System.out.println(one);
-        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
-        System.out.println(userIPage);
+        final Func1<IPage<User>, List<User>> selectPageVo = sysUserMapper::selectPageVo;
+        System.out.println(selectPageVo);
+//        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
+//        System.out.println(userIPage);
 
         // 使用pageHelper 的时候 自引用jsqlparser版本不兼容, net.sf.jsqlparser.statement.select.PlainSelect.getGroupByColumnReferences()
         // 故推荐使用mp自带分页插件
