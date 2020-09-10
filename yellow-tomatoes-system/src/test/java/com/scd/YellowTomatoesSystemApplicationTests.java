@@ -7,10 +7,12 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.scd.modules.system.domain.User;
 import com.scd.modules.system.service.UserService;
 import com.scd.modules.system.service.mapper.SysUserMapper;
+import com.scd.utils.RedisUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -24,6 +26,9 @@ class YellowTomatoesSystemApplicationTests {
 
     @Autowired
     private SysUserMapper sysUserMapper;
+
+    @Autowired
+    private RedisUtils redisUtils;
 
     @Test
     void getUser() {
@@ -67,6 +72,14 @@ class YellowTomatoesSystemApplicationTests {
 //
 //        boolean save = userService.save(user);
 //        System.out.println("scd = "+save);
+    }
+
+    @Test
+    void redisTest(){
+        boolean set = redisUtils.set("scd", "aaaaaaaaaaaa");
+        System.out.println(set);
+        Object scd = redisUtils.get("scd");
+        System.out.println(scd.toString());
     }
 
 }

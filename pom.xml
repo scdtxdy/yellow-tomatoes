@@ -27,6 +27,7 @@
         <swagger.version>2.9.2</swagger.version>
         <hutool.version>5.2.5</hutool.version>
         <mybatisplus.version>3.4.0</mybatisplus.version>
+        <fastjson.version>1.2.54</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -68,6 +69,29 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- spring cache -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        <!-- redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!--Spring boot end-->
+
+        <!--spring2.0集成redis所需common-pool2-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+            <version>${commons-pool2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
         <!--监控sql日志-->
         <dependency>
@@ -136,6 +160,12 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${hutool.version}</version>
+        </dependency>
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
