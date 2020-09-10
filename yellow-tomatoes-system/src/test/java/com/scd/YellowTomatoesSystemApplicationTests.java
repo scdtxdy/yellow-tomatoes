@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
+import springfox.documentation.annotations.Cacheable;
 
 import java.util.List;
 
@@ -36,10 +37,9 @@ class YellowTomatoesSystemApplicationTests {
 
 //        User one = sysUserMapper.findOne(1l);
 //        System.out.println(one);
-        final Func1<IPage<User>, List<User>> selectPageVo = sysUserMapper::selectPageVo;
-        System.out.println(selectPageVo);
-//        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
-//        System.out.println(userIPage);
+
+        List<User> userIPage = sysUserMapper.selectPageVo(new Page<User>(1, 2));
+        System.out.println(userIPage);
 
         // 使用pageHelper 的时候 自引用jsqlparser版本不兼容, net.sf.jsqlparser.statement.select.PlainSelect.getGroupByColumnReferences()
         // 故推荐使用mp自带分页插件
