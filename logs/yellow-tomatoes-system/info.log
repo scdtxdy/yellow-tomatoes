@@ -985,3 +985,122 @@ java.lang.IllegalStateException: No cache could be resolved for 'Builder[public 
 2020-09-10 18:06:33,673 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-09-10 18:06:33,675 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
 2020-09-10 18:06:33,689 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 14 ms
+2020-09-10 20:57:18,282 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-10 20:57:18,432 [SpringContextShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1825 - {dataSource-1} closed
+2020-09-10 20:57:37,800 [main] INFO  [com.scd.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 41376 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-09-10 20:57:37,810 [main] INFO  [com.scd.YellowTomatoesSystemApplication] SpringApplication.java:655 - The following profiles are active: dev
+2020-09-10 20:57:39,321 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-09-10 20:57:39,326 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-09-10 20:57:39,402 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:187 - Finished Spring Data repository scanning in 53ms. Found 0 Redis repository interfaces.
+2020-09-10 20:57:39,893 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:335 - Bean 'redisConfig' of type [com.scd.config.RedisConfig$$EnhancerBySpringCGLIB$$645de241] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-10 20:57:40,364 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-09-10 20:57:40,380 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-10 20:57:40,381 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-09-10 20:57:40,382 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-10 20:57:40,699 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-09-10 20:57:40,700 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 2740 ms
+2020-09-10 20:57:40,991 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-09-10 20:57:41,486 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:930 - {dataSource-1} inited
+2020-09-10 20:57:43,881 [main] INFO  [com.scd.config.RedisConfig] RedisConfig.java:104 - 初始化 -> [Redis CacheErrorHandler]
+2020-09-10 20:57:43,892 [main] INFO  [s.d.s.w.PropertySourcedRequestMappingHandlerMapping] PropertySourcedRequestMappingHandlerMapping.java:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-10 20:57:44,068 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-10 20:57:45,341 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8080"]
+2020-09-10 20:57:45,378 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-10 20:57:45,379 [main] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:160 - Context refreshed
+2020-09-10 20:57:45,409 [main] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:163 - Found 1 custom documentation plugin(s)
+2020-09-10 20:57:45,474 [main] INFO  [s.d.spring.web.scanners.ApiListingReferenceScanner] ApiListingReferenceScanner.java:41 - Scanning for api listing references
+2020-09-10 20:57:45,759 [main] INFO  [com.scd.YellowTomatoesSystemApplication] StartupInfoLogger.java:61 - Started YellowTomatoesSystemApplication in 9.185 seconds (JVM running for 12.042)
+2020-09-10 21:06:43,477 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-10 21:06:43,483 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2020-09-10 21:06:43,502 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 17 ms
+2020-09-10 21:06:45,223 [http-nio-8080-exec-1] ERROR [o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]] DirectJDKLog.java:175 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.alibaba.fastjson.JSONArray cannot be cast to com.baomidou.mybatisplus.extension.plugins.pagination.Page] with root cause
+java.lang.ClassCastException: com.alibaba.fastjson.JSONArray cannot be cast to com.baomidou.mybatisplus.extension.plugins.pagination.Page
+	at com.scd.modules.system.service.impl.SysUserServiceImpl$$EnhancerBySpringCGLIB$$c0c6cf95.selectPageVo(<generated>)
+	at com.scd.modules.system.rest.SysUserController.selectPageVo(SysUserController.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.github.xiaoymin.knife4j.spring.filter.ProductionSecurityFilter.doFilter(ProductionSecurityFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.github.xiaoymin.knife4j.spring.filter.SecurityBasicAuthFilter.doFilter(SecurityBasicAuthFilter.java:90)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-09-10 23:24:24,514 [SpringContextShutdownHook] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-10 23:24:24,691 [SpringContextShutdownHook] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:1825 - {dataSource-1} closed
+2020-09-10 23:26:02,970 [main] INFO  [com.scd.YellowTomatoesSystemApplication] StartupInfoLogger.java:55 - Starting YellowTomatoesSystemApplication on DESKTOP-12K8J29 with PID 43132 (C:\Users\shang\IdeaProjects\yellow-tomatoes\yellow-tomatoes-system\target\classes started by shang in C:\Users\shang\IdeaProjects\yellow-tomatoes)
+2020-09-10 23:26:02,977 [main] INFO  [com.scd.YellowTomatoesSystemApplication] SpringApplication.java:655 - The following profiles are active: dev
+2020-09-10 23:26:04,974 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:249 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-09-10 23:26:04,983 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:127 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-09-10 23:26:05,074 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] RepositoryConfigurationDelegate.java:187 - Finished Spring Data repository scanning in 56ms. Found 0 Redis repository interfaces.
+2020-09-10 23:26:05,529 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:335 - Bean 'redisConfig' of type [com.scd.config.RedisConfig$$EnhancerBySpringCGLIB$$b01b6293] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-10 23:26:05,991 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8080 (http)
+2020-09-10 23:26:06,011 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8080"]
+2020-09-10 23:26:06,014 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-09-10 23:26:06,018 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-10 23:26:06,381 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-09-10 23:26:06,381 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:285 - Root WebApplicationContext: initialization completed in 3285 ms
+2020-09-10 23:26:06,724 [main] INFO  [c.a.d.s.b.a.DruidDataSourceAutoConfigure] DruidDataSourceAutoConfigure.java:56 - Init DruidDataSource
+2020-09-10 23:26:07,176 [main] INFO  [com.alibaba.druid.pool.DruidDataSource] DruidDataSource.java:930 - {dataSource-1} inited
+2020-09-10 23:26:09,414 [main] INFO  [com.scd.config.RedisConfig] RedisConfig.java:104 - 初始化 -> [Redis CacheErrorHandler]
+2020-09-10 23:26:09,439 [main] INFO  [s.d.s.w.PropertySourcedRequestMappingHandlerMapping] PropertySourcedRequestMappingHandlerMapping.java:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-10 23:26:09,802 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-10 23:26:11,095 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8080"]
+2020-09-10 23:26:11,142 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-10 23:26:11,144 [main] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:160 - Context refreshed
+2020-09-10 23:26:11,200 [main] INFO  [s.d.s.web.plugins.DocumentationPluginsBootstrapper] DocumentationPluginsBootstrapper.java:163 - Found 1 custom documentation plugin(s)
+2020-09-10 23:26:11,284 [main] INFO  [s.d.spring.web.scanners.ApiListingReferenceScanner] ApiListingReferenceScanner.java:41 - Scanning for api listing references
+2020-09-10 23:26:11,529 [main] INFO  [com.scd.YellowTomatoesSystemApplication] StartupInfoLogger.java:61 - Started YellowTomatoesSystemApplication in 9.49 seconds (JVM running for 12.88)
+2020-09-10 23:26:58,762 [http-nio-8080-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-10 23:26:58,763 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2020-09-10 23:26:58,781 [http-nio-8080-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 17 ms

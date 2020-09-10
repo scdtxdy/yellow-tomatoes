@@ -1,6 +1,7 @@
 package com.scd.modules.system.service;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.scd.common.service.BaseService;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public interface UserService extends BaseService<User> {
 
-//    public Page<User> selectPageVo();
+    public IPage<User> selectPageVo();
 
-    List<User> selectPageVo();
+//    List<User> selectPageVo();
 }

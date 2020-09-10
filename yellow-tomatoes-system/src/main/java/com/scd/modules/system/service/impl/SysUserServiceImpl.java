@@ -1,7 +1,9 @@
 package com.scd.modules.system.service.impl;
 
+import cn.hutool.db.PageResult;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.scd.common.service.impl.BaseServiceImpl;
@@ -25,23 +27,23 @@ public class SysUserServiceImpl extends BaseServiceImpl<SysUserMapper, User> imp
     @Autowired
     private SysUserMapper sysUserMapper;
 
+    @Cacheable
+    @Override
+    public IPage<User> selectPageVo() {
+        System.out.println("scd");
+        IPage page = new Page<User>(1, 2);
+        List<User> users = sysUserMapper.selectPageVo(page);
+        page.setRecords(users);
+        return page;
+    }
+
 //    @Cacheable
 //    @Override
-//    public Page<User> selectPageVo() {
+//    public List<User>  selectPageVo() {
 //        System.out.println("scd");
 //        Page page = new Page<User>(1, 2);
 //        List<User> users = sysUserMapper.selectPageVo(page);
-//        page.setRecords(users);
-//        return page;
+//        return users;
 //    }
-
-    @Cacheable
-    @Override
-    public List<User>  selectPageVo() {
-        System.out.println("scd");
-        Page page = new Page<User>(1, 2);
-        List<User> users = sysUserMapper.selectPageVo(page);
-        return users;
-    }
 
 }

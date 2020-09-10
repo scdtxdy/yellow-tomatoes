@@ -1,5 +1,6 @@
 package com.scd.modules.system.rest;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.scd.modules.system.domain.User;
 import com.scd.modules.system.service.UserService;
@@ -25,7 +26,7 @@ public class SysUserController {
 
     @ApiOperation("导出用户数据")
     @GetMapping
-    public List<User> selectPageVo(){
+    public IPage<User> selectPageVo(){
         return userService.selectPageVo();
     }
 }
