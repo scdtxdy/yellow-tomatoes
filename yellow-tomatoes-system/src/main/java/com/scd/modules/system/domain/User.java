@@ -1,16 +1,26 @@
 package com.scd.modules.system.domain;
 
-import com.baomidou.mybatisplus.annotation.*;
-import com.scd.modules.system.enums.SexEnum;
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.bean.copier.CopyOptions;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import org.springframework.boot.autoconfigure.batch.BatchProperties;
 
+import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Objects;
+import java.util.Set;
 
 @Data
 @TableName("user")
-public class User {
+public class User implements Serializable {
+
     /** 系统用户ID */
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId
     private Long id;
 
 
@@ -28,6 +38,36 @@ public class User {
     /** 用户头像 */
     @TableField(exist = false)
     private String avatar;
+
+    /** 用户角色 */
+    @TableField(exist = false)
+    private Set<Role> roles;
+
+    /** 用户职位*/
+    @TableField(exist = false)
+    private Job job;
+
+    /** 用户部门*/
+    @TableField(exist = false)
+    private Dept dept;
+
+    /** 密码 */
+    private String password;
+
+
+    /** 用户名 */
+    @NotBlank(message = "请填写用户名称")
+    private String username;
+
+
+    /** 部门名称 */
+    private Long deptId;
+
+
+    /** 手机号码 */
+    @NotBlank(message = "请输入手机号码")
+    private String phone;
+
 
     /** 岗位名称 */
     private Long jobId;
@@ -47,10 +87,28 @@ public class User {
 
 
     /** 性别 */
-    private SexEnum sex;
+    private String sex;
 
-    /* 删除标识*/
-    @TableLogic
-    private Integer deleted;
+    public @interface Update {}
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        User user = (User) o;
+        return Objects.equals(id, user.id) &&
+                Objects.equals(username, user.username);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username);
+    }
+    public void copy(User source){
+        BeanUtil.copyProperties(source,this, CopyOptions.create().setIgnoreNullValue(true));
+    }
 }

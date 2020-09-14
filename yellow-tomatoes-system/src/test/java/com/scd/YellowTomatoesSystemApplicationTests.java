@@ -1,20 +1,15 @@
 package com.scd;
 
-import cn.hutool.core.lang.func.Func1;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.scd.modules.system.domain.User;
 import com.scd.modules.system.service.UserService;
 import com.scd.modules.system.service.mapper.SysUserMapper;
 import com.scd.utils.RedisUtils;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-import springfox.documentation.annotations.Cacheable;
 
 import java.util.List;
 

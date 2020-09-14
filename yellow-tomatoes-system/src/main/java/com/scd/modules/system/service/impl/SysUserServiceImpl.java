@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.scd.common.service.impl.BaseServiceImpl;
 import com.scd.modules.system.domain.User;
 import com.scd.modules.system.service.UserService;
+import com.scd.modules.system.service.dto.UserDto;
 import com.scd.modules.system.service.mapper.SysUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
@@ -24,26 +25,38 @@ import java.util.function.Function;
 @CacheConfig(cacheNames = "user")
 public class SysUserServiceImpl extends BaseServiceImpl<SysUserMapper, User> implements UserService{
 
+//    private final IGenerator generator;
+
     @Autowired
-    private SysUserMapper sysUserMapper;
+    private SysUserMapper userMapper;
 
     @Cacheable
     @Override
     public IPage<User> selectPageVo() {
         System.out.println("scd");
         IPage page = new Page<User>(1, 2);
-        List<User> users = sysUserMapper.selectPageVo(page);
+        List<User> users = userMapper.selectPageVo(page);
         page.setRecords(users);
         return page;
     }
 
-//    @Cacheable
-//    @Override
-//    public List<User>  selectPageVo() {
-//        System.out.println("scd");
-//        Page page = new Page<User>(1, 2);
-//        List<User> users = sysUserMapper.selectPageVo(page);
-//        return users;
-//    }
+
+    /**
+     * 根据用户名查询
+     *
+     * @param userName /
+     * @return /
+     */
+    @Override
+    public UserDto findByName(String userName) {
+        User user =  userMapper.findByName(userName);
+        //用户所属岗位
+//        user.setJob(jobService.getById(user.getJobId()));
+        //用户所属部门
+//        user.setDept(deptService.getById(user.getDeptId()));
+//        return generator.convert(user,UserDto.class);
+        UserDto userDto = new UserDto();
+        return userDto;
+    }
 
 }
