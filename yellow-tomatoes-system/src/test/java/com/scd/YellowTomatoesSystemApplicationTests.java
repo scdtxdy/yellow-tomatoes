@@ -1,11 +1,13 @@
 package com.scd;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.scd.dozer.service.IGenerator;
 import com.scd.modules.system.domain.User;
 import com.scd.modules.system.service.UserService;
+import com.scd.modules.system.service.dto.UserDto;
 import com.scd.modules.system.service.mapper.SysUserMapper;
 import com.scd.utils.RedisUtils;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,6 +27,9 @@ class YellowTomatoesSystemApplicationTests {
 
     @Autowired
     private RedisUtils redisUtils;
+
+    @Autowired
+    private IGenerator iGenerator;
 
     @Test
     void getUser() {
@@ -75,6 +80,20 @@ class YellowTomatoesSystemApplicationTests {
         System.out.println(set);
         Object scd = redisUtils.get("scd");
         System.out.println(scd.toString());
+    }
+
+    @Test
+    void doczer(){
+        User user = new User();
+        user.setEmail("542846492@qq.com");
+        user.setNickName("西塔吴彦祖");
+        user.setId(1l);
+        user.setDeptId(1l);
+        user.setPhone("13941369466");
+        System.out.println(user.toString() );
+
+        UserDto userDto = iGenerator.convert(user, UserDto.class);
+        System.out.println(userDto);
     }
 
 }

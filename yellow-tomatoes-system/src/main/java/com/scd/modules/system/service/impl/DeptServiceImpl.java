@@ -1,7 +1,3 @@
-/**
- * Copyright (C) 2018-2020
- * All rights reserved, Designed By www.yixiang.co
- */
 package com.scd.modules.system.service.impl;
 
 import com.scd.common.service.impl.BaseServiceImpl;
@@ -31,10 +27,6 @@ import java.util.stream.Collectors;
 //import org.springframework.cache.annotation.CacheEvict;
 //import org.springframework.cache.annotation.Cacheable;
 
-/**
-* @author hupeng
-* @date 2020-05-14
-*/
 @Service
 @AllArgsConstructor
 //@CacheConfig(cacheNames = "dept")
