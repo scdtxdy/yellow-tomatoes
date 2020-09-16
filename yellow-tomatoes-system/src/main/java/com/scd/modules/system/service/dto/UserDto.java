@@ -16,7 +16,7 @@ public class UserDto implements Serializable {
     @ApiModelProperty(hidden = true)
     private Long id;
 
-    @Mapping("nickName")//指定对应字段
+//    @Mapping("nickName")//指定对应字段
     private String username;
 
     private String nickName;

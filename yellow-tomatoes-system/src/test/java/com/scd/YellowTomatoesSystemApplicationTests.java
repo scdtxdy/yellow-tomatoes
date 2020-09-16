@@ -1,7 +1,9 @@
 package com.scd;
 
+import cn.hutool.crypto.asymmetric.RSA;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.scd.dozer.service.IGenerator;
+import com.scd.modules.security.security.TokenProvider;
 import com.scd.modules.system.domain.User;
 import com.scd.modules.system.service.UserService;
 import com.scd.modules.system.service.dto.UserDto;
@@ -10,7 +12,15 @@ import com.scd.utils.RedisUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -94,6 +104,29 @@ class YellowTomatoesSystemApplicationTests {
 
         UserDto userDto = iGenerator.convert(user, UserDto.class);
         System.out.println(userDto);
+    }
+
+    @Value("${rsa.private_key}")
+    private String privateKey;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private AuthenticationManagerBuilder authenticationManagerBuilder;
+
+    @Autowired
+    private TokenProvider tokenProvider;
+
+    @Test
+    void rsaTest(){
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken("admin", "123456");
+        Authentication authentication = authenticationManagerBuilder.getObject().authenticate(authenticationToken);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        System.out.println(userDetails.toString());
+        String token = tokenProvider.createToken(authentication);
+        System.out.println(token);
     }
 
 }

@@ -15,6 +15,7 @@ import com.scd.modules.system.service.dto.UserDto;
 import com.scd.modules.system.service.mapper.DeptMapper;
 //import com.scd.modules.system.service.mapper.MenuMapper;
 //import com.scd.modules.system.service.mapper.RoleMapper;
+import com.scd.modules.system.service.mapper.MenuMapper;
 import com.scd.modules.system.service.mapper.RoleMapper;
 import com.scd.utils.FileUtil;
 import com.scd.utils.StringUtils;
@@ -35,9 +36,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 // 默认不使用缓存
-//import org.springframework.cache.annotation.CacheConfig;
-//import org.springframework.cache.annotation.CacheEvict;
-//import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 
 @Service
 @AllArgsConstructor
@@ -46,7 +47,7 @@ public class RoleServiceImpl extends BaseServiceImpl<RoleMapper, Role> implement
 
 //    private final IGenerator generator;
     private final RoleMapper roleMapper;
-//    private final MenuMapper menuMapper;
+    private final MenuMapper menuMapper;
     private final DeptMapper deptMapper;
 //    private final RolesMenusService rolesMenusService;
 //    private final  RolesDeptsService rolesDeptsService;
@@ -234,24 +235,23 @@ public class RoleServiceImpl extends BaseServiceImpl<RoleMapper, Role> implement
      * @return 权限信息
      */
     @Override
-//    @Cacheable(key = "'loadPermissionByUser:' + #p0.username")
+//    @Cacheable(cacheNames = {"user","user"}, key = "'loadPermissionByUser:' + #p0.username")
     public Collection<GrantedAuthority> mapToGrantedAuthorities(UserDto user) {
-//        Set<Role> roles = roleMapper.findByUsers_Id(user.getId());
-//        for (Role role : roles) {
-//            Set<Menu> menuSet = menuMapper.findMenuByRoleId(role.getId());
-//            role.setMenus(menuSet);
-//            Set<Dept> deptSet = deptMapper.findDeptByRoleId(role.getId());
-//            role.setDepts(deptSet);
-//        }
-//        Set<String> permissions = roles.stream().filter(role -> StringUtils.isNotBlank(role.getPermission())).map(Role::getPermission).collect(Collectors.toSet());
-//        permissions.addAll(
-//                roles.stream().flatMap(role -> role.getMenus().stream())
-//                        .filter(menu -> StringUtils.isNotBlank(menu.getPermission()))
-//                        .map(Menu::getPermission).collect(Collectors.toSet())
-//        );
-//        return permissions.stream().map(SimpleGrantedAuthority::new)
-//                .collect(Collectors.toList());
-        return null;
+        Set<Role> roles = roleMapper.findByUsers_Id(user.getId());
+        for (Role role : roles) {
+            Set<Menu> menuSet = menuMapper.findMenuByRoleId(role.getId());
+            role.setMenus(menuSet);
+            Set<Dept> deptSet = deptMapper.findDeptByRoleId(role.getId());
+            role.setDepts(deptSet);
+        }
+        Set<String> permissions = roles.stream().filter(role -> StringUtils.isNotBlank(role.getPermission())).map(Role::getPermission).collect(Collectors.toSet());
+        permissions.addAll(
+                roles.stream().flatMap(role -> role.getMenus().stream())
+                        .filter(menu -> StringUtils.isNotBlank(menu.getPermission()))
+                        .map(Menu::getPermission).collect(Collectors.toSet())
+        );
+        return permissions.stream().map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
     }
 
     @Override

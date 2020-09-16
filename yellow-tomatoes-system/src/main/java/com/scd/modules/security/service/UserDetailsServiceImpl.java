@@ -7,12 +7,14 @@ import com.scd.modules.system.service.UserService;
 import com.scd.modules.system.service.dto.DeptSmallDto;
 import com.scd.modules.system.service.dto.JobSmallDto;
 import com.scd.modules.system.service.dto.UserDto;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.Optional;
 
 @Service("userDetailsService")
@@ -42,6 +44,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
     private UserDetails createJwtUser(UserDto user) {
+        Collection<GrantedAuthority> grantedAuthorities = roleService.mapToGrantedAuthorities(user);
         return new JwtUser(
                 user.getId(),
                 user.getUsername(),
